@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Employee List</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<!-- Custom JS Controller -->
+<script src="js/controller.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="empCtrl" ng-init="allUsers()">
+    <div class="container">
+        <h2>Employee List</h2>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Employee Name</th>
+                    <th>Profile</th>
+                    <th>Code</th>
+                    <th>Age</th>
+                    <th>Salary</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="user in users">
+                    <td>{{user.name}}</td>
+                    <td>{{user.profile}}</td>
+                    <td>{{user.code}}</td>
+                    <td>{{user.age}}</td>
+                    <td>{{user.salary}}</td>
+                    <td>
+                        <button ng-click="editUser(user.id)" class="btn btn-success">Edit</button>
+                        <button ng-click="deleteUser(user.id)" class="btn btn-danger">Delete</button>
+                        <a ng-href="/index.html" class="btn btn-primary">Add</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

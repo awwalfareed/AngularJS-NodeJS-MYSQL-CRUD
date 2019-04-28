@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+    <head>
+        <title>Edit Details</title>
+        
+<!-- AngularJS File -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<!-- Custom JS Controller -->
+<script src="js/controller.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="formCtrl" >
+    <div class="container">
+        <br/><br/><br/>
+        <a href="student_view.html" class="btn btn-success btn-lg">Edit Student Details</a>
+        <br/><br/><br/>
+        <form ng-submit="students(userinfo)" ng-init="editId()">  
+            <div class="form-group">
+                <label for="firstname">First Name:</label>
+                <input type="text" ng-model="userinfo.fname" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="lastname">Last name</label>
+                <input type="text" ng-model="userinfo.lname" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="number">Mobile No:</label>
+                <input type="number" ng-model="userinfo.mobile" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" ng-model="userinfo.email" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" ng-model="userinfo.age" class="form-control">
+            </div>
+            <div class="form-group">
+                <Select ng-model="userinfo.sex">
+                    <option>Male</option>
+                    <option>Female</option>
+                </Select>
+            </div>
+            <button type="submit" ng-click="redirect()" class="btn btn-primary">Submit</button>
+        </form>
+        
+    </div>     
+</body>
+</html>

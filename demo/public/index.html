@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+    <head>
+        <title>AngularJS | Node.js | MySQL | CRUD</title>
+        
+<!-- AngularJS File -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<!-- Custom JS Controller -->
+<script src="js/controller.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="empCtrl">
+    <div class="container">
+        <br/><br/><br/>
+        <a href="emp_list.html" class="btn btn-primary btn-lg">List of Employee</a>
+        <br/><br/><br/>
+        <form ng-submit="user(info)">  
+            <div class="form-group">
+                <label for="firstname">Employee Name:</label>
+                <input type="text" ng-model="info.employeename" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="lastname">Profile</label>
+                <input type="text" ng-model="info.profile" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="code">Code:</label>
+                <input type="number" ng-model="info.code" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" ng-model="info.age" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="salary">Salary:</label>
+                <input type="number" ng-model="info.salary" class="form-control">
+            </div>
+            <button type="submit" ng-click="redirect()" class="btn btn-success btn-lg">Add Employee Detail</button>
+        </form>
+        
+    </div>     
+</body>
+</html>
