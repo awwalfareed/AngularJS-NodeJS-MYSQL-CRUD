@@ -17,7 +17,7 @@
     "jquery": "^3.3.1",
     "mysql": "^2.16.0",
     "mysql-crud": "^0.1.4",
-    "nodemon": "^1.18.9",
+    "nodemon": "^2.0.3",
     "tether": "^1.4.5"
   }
 }
